@@ -1,12 +1,16 @@
-/* Este es el archivo style.css */
-
-/* Estilo para el título h1 */
-h1 {
-    color: blue;
+body {
+    margin: 0 auto;
+    background-color: rgb(23, 23, 23);
+    color: whitesmoke;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-/* Estilo para los párrafos */
-p {
-    font-size: 18px;
-    color: green;
+h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+svg {
+    border: solid 4px white;
 }
