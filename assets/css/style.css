@@ -240,10 +240,7 @@ article.active {
   border-radius: 3px;
 }
 
-.has-scrollbar::-webkit-scrollbar {
-  width: 5px; /* for vertical scrollbar */
-  height: 5px; /* for horizontal scrollbar */
-}
+
 
 .has-scrollbar::-webkit-scrollbar-track {
   background: var(--onyx);
@@ -301,9 +298,9 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
-  overflow: hidden;
+  max-height: 500;
   transition: var(--transition-2);
+  overflow: visible;
 }
 
 .sidebar.active { max-height: 405px; }
@@ -372,8 +369,7 @@ main {
 .info_more-btn span { display: none; }
 
 .sidebar-info_more {
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
   transition: var(--transition-2);
 }
 
@@ -430,7 +426,6 @@ main {
 
 
 .social-item .social-link:hover { color: var(--light-gray); }
-
 
 
 
@@ -838,16 +833,7 @@ main {
 
   .contacts-list { grid-template-columns: 1fr; }
 
-  .contact-info :is(.contact-link) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 
-  .contact-info :is(.contact-link, time, address) {
-    --fs-7: 14px;
-    font-weight: var(--fw-300);
-  }
 
   .separator:last-of-type {
     margin: 15px 0;
@@ -856,3 +842,4 @@ main {
 
   .social-list { justify-content: center; }}
 }
+
