@@ -1,3 +1,8 @@
+#menuToggle input:checked ~ #menu .button:after {
+  right: 0;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -11,18 +16,22 @@ body {
     display: block;
     background: #333;
     position: fixed;
+    width: 40px;
+    height: 32px;
     top: 20px;
     left: 20px;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
+    
 }
 
 #menuToggle a
 {
   text-decoration: none;
   color: #232323;
-  
+  position: relative;
+  left:-60px;
   transition: color 0.3s ease;
 }
 
@@ -121,6 +130,11 @@ body {
     background: #555;
 }
 
+
+#menuToggle input:checked ~ #menu a:hover:after {
+  right: 0;
+}
+
 #map-container {
     flex: 1;
     height: 100%;
@@ -130,3 +144,4 @@ body {
     width: 100%;
     height: 100%;
 }
+

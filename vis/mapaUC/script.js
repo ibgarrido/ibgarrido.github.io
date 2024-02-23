@@ -1,6 +1,6 @@
-	// TO MAKE THE MAP APPEAR YOU MUST
-	// ADD YOUR ACCESS TOKEN FROM
-	// https://account.mapbox.com
+// TO MAKE THE MAP APPEAR YOU MUST
+// ADD YOUR ACCESS TOKEN FROM
+// https://account.mapbox.com
 	mapboxgl.accessToken = 'pk.eyJ1IjoiaWJnYXJyaWRvIiwiYSI6ImNsc3h4ZWViMTA3eHEyanBtcDllbHFsbWcifQ.MSSn7vU0DEMpaS9xfRn6mQ';
     const map = new mapboxgl.Map({
         container: 'map',
@@ -142,4 +142,3 @@
         loadSalasUC();
     });
     
-spinGlobe();
