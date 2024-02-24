@@ -147,7 +147,7 @@ function loadComidaUC() {
     if (!map.getSource('ComidaUCSource')) {
         map.addSource('ComidaUCSource', {
             type: 'geojson',
-            data: 'ComidaUC.geojson'
+            data: 'comidaUC.geojson'
         });
     }
 
