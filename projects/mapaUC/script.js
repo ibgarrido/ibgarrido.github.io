@@ -6,7 +6,7 @@ const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
     projection: 'globe', // Display the map as a globe, since satellite-v9 defaults to Mercator
-    zoom: 16,
+    zoom: 16.1,
     center: [-70.61139890318891, -33.4983298247388] // Starting position [lng, lat] , 
 });
 
@@ -20,7 +20,7 @@ function loadEdificiosUC() {
     });
     map.addSource('edificiosUCSource', {
         type: 'geojson',
-        data: 'edificiosUC.geojson'
+        data: 'data/edificiosUC.geojson'
     });
 
     map.addLayer({
@@ -56,7 +56,7 @@ function loadSalasUC() {
     if (!map.getSource('SalasUCSource')) {
         map.addSource('SalasUCSource', {
             type: 'geojson',
-            data: 'salasUC.geojson'
+            data: 'data/salasUC.geojson'
         });
     }
 
@@ -92,7 +92,7 @@ function loadAguasUC() {
     if (!map.getSource('AguasUCSource')) {
         map.addSource('AguasUCSource', {
             type: 'geojson',
-            data: 'aguasUC.geojson'
+            data: 'data/aguasUC.geojson'
         });
     }
 
@@ -140,14 +140,14 @@ function loadAguasUC() {
     }
 }
 
-
+/* COMIDA UC */
 
 function loadComidaUC() {
     // Check if 'ComidaUCSource' exists before adding
     if (!map.getSource('ComidaUCSource')) {
         map.addSource('ComidaUCSource', {
             type: 'geojson',
-            data: 'comidaUC.geojson'
+            data: 'data/comidaUC.geojson'
         });
     }
 
@@ -155,7 +155,7 @@ function loadComidaUC() {
     if (!map.getLayer('comidaUCLayer')) {
         map.addLayer({
             id: 'comidaUCLayer',
-            type: 'circle', // Change type to 'circle' for point data
+            type: 'circle', 
             source: 'ComidaUCSource',
             paint: {
                 'circle-radius': [
@@ -209,12 +209,13 @@ function loadComidaUC() {
     });
 }
 
+/*BAñOS UC*/
 function loadBañosUC() {
     // Check if 'BañosUCSource' exists before adding
     if (!map.getSource('BañosUCSource')) {
         map.addSource('BañosUCSource', {
             type: 'geojson',
-            data: 'bañosUC.geojson'
+            data: 'data/bañosUC.geojson'
         });
     }
 
@@ -265,7 +266,7 @@ function loadBañosUC() {
 
         // Set the HTML content of the popup
         popup.setLngLat(coordinates)
-            .setHTML('<h3>' + 'Minusvalido: '+ (properties.handicap) + '</h3>')
+            .setHTML('<h3>' + 'Infraestructura Minusvalido: '+ (properties.handicap) + '</h3>')
             .addTo(map);
     });
 
