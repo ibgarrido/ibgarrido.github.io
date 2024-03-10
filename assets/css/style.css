@@ -866,3 +866,6 @@ main {
   animation: customCursor 1s steps(10) infinite; /* Adjust the duration and steps as needed */
 }
 
+:root.disable-right-click {
+  pointer-events: none; /* Disable pointer events to prevent right-click context menu */
+}
