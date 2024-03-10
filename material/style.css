@@ -42,3 +42,25 @@ button {
 .center-container {
   text-align: center;
 }
+
+:root {
+  --custom-cursor-url: url('../assets/cursors/frame_00.png');
+}
+
+@keyframes customCursor {
+  0% { cursor: var(--custom-cursor-url), auto; }
+  10% { cursor: url('../assets/cursors/frame_00.png'), auto; }
+  20% { cursor: url('../assets/cursors/frame_02.png'), auto; }
+  30% { cursor: url('../assets/cursors/frame_03.png'), auto; }
+  40% { cursor: url('../assets/cursors/frame_04.png'), auto; }
+  50% { cursor: url('../assets/cursors/frame_05.png'), auto; }
+  60% { cursor: url('../assets/cursors/frame_06.png'), auto; }
+  70% { cursor: url('../assets/cursors/frame_07.png'), auto; }
+  80% { cursor: url('../assets/cursors/frame_08.png'), auto; }
+  90% { cursor: url('../assets/cursors/frame_09.png'), auto; }
+  100% { cursor: url('../assets/cursors/frame_10.png'), auto; }
+}
+
+:root:hover {
+  animation: customCursor 1s steps(10) infinite; /* Adjust the duration and steps as needed */
+}
